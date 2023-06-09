@@ -3,8 +3,8 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
   push_to_registry:
+    runs-on: self-hosted
     name: Push Docker image to Docker Hub
-    runs-on: docker:latest
     steps: 
       - name: Check out the repo
         uses: actions/checkout@v3
